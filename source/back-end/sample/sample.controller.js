@@ -10,8 +10,8 @@ const Sample = require("./sample.schema");
  * @returns {JSON} return description
  */
 const sample = async (req = request, res = response) => {
-    // Returns list of Sample objects under "result" field
-    /* #swagger.responses[200] = {
+  // Returns list of Sample objects under "result" field
+  /* #swagger.responses[200] = {
             "description": "OK",
             "content": {
               "application/json": {
@@ -30,20 +30,19 @@ const sample = async (req = request, res = response) => {
             }
         }   
     */
-    try {
-        // Your Code Goes Here!!!!
-        
-        // Return query result
-        res.json ({
-            result : result
-        });
-    } catch (error) {
-        res.json ({
-            status : error.status
-        });
-    }
+  try {
+    // Your Code Goes Here!!!!
+    // Return query result
+    res.json({
+      result: result,
+    });
+  } catch (error) {
+    res.json({
+      status: error.status,
+    });
+  }
 };
 
 module.exports = {
-    sample,
+  sample,
 };
