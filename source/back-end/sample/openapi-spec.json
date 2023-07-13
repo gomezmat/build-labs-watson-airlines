@@ -124,7 +124,22 @@
         "parameters": [],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "airports": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Airport"
+                      }
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       }
