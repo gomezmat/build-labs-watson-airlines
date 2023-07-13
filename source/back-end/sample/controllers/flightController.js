@@ -2,7 +2,7 @@ const Flight = require("../models/Flight");
 
 async function showOne(req, res) {
   const flight = await Flight.findById(req.params.id);
-  return res.json(flight);
+  return res.json({ flight: flight });
 }
 
 async function showDepartures(req, res) {
@@ -15,7 +15,7 @@ async function showDepartures(req, res) {
       DESTINATION_AIRPORT: destinationAirport,
       ARRIVAL_DATE: arrivalDate,
     });
-    return res.json(departures);
+    return res.json({ departures: departures });
   } catch (err) {
     console.log(err);
   }
