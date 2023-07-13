@@ -98,7 +98,22 @@
         "parameters": [],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "airlines": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Airline"
+                      }
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       }
