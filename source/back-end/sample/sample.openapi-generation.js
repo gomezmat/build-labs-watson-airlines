@@ -82,7 +82,7 @@ const general_specs = {
       description: "Local Server",
     },
     {
-      url: "https://chat-bot.14srz5t0qeya.us-south.codeengine.appdomain.cloud/",
+      url: "https://chat-bot.14srz5t0qeya.us-south.codeengine.appdomain.cloud",
       description: "IBM Code Engine Deployment",
     },
   ],
