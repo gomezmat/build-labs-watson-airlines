@@ -110,8 +110,74 @@
                   "properties": {
                     "flight": {
                       "type": "object",
-                      "items": {
-                        "$ref": "#/components/schemas/Flight"
+                      "properties": {
+                        "type": {
+                          "type": "string",
+                          "example": "object"
+                        },
+                        "AIRLINE": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "example": "string"
+                            }
+                          }
+                        },
+                        "FLIGHT_NUMBER": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "example": "number"
+                            }
+                          }
+                        },
+                        "ORIGIN_AIRPORT": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "example": "string"
+                            }
+                          }
+                        },
+                        "DESTINATION_AIRPORT": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "example": "string"
+                            }
+                          }
+                        },
+                        "CANCELLED": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "example": "boolean"
+                            }
+                          }
+                        },
+                        "DEPARTURE_DATE": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "example": "date"
+                            }
+                          }
+                        },
+                        "ARRIVAL_DATE": {
+                          "type": "object",
+                          "properties": {
+                            "type": {
+                              "type": "string",
+                              "example": "date"
+                            }
+                          }
+                        }
                       }
                     }
                   }
