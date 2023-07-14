@@ -3,7 +3,7 @@ require("dotenv").config();
 const path = require("path");
 const mongo = require("./sample.mongodb");
 const routes = require("./routes");
-const APP_PORT = 8080;
+const APP_PORT = process.env.APP_PORT || 8080;
 const express = require("express");
 const app = express();
 
