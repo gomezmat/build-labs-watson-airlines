@@ -19,12 +19,12 @@ async function showDepartures(req, res) {
     const departures = await Flight.find({
       ORIGIN_AIRPORT: originAirport,
       DESTINATION_AIRPORT: destinationAirport,
-      ARRIVAL_DATE: new Date(arrivalDate),
+      ARRIVAL_DATE: arrivalDate,
     });
     return res.json({ departures });
   } catch (error) {
     console.error(error);
-    return res.status(500).json({ error: "Error" });
+    return res.status(500).json({ error: error });
   }
 }
 
