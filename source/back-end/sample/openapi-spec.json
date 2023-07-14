@@ -109,7 +109,10 @@
                   "type": "object",
                   "properties": {
                     "flight": {
-                      "$ref": "#/components/schemas/Flight"
+                      "type": "object",
+                      "items": {
+                        "$ref": "#/components/schemas/Flight"
+                      }
                     }
                   }
                 }
