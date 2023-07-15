@@ -11,7 +11,7 @@
   },
   "servers": [
     {
-      "url": "https://chat-bot-app.14srz5t0qeya.us-south.codeengine.appdomain.cloud",
+      "url": "https://chat-updated-app.14srz5t0qeya.us-south.codeengine.appdomain.cloud",
       "description": "IBM Code Engine Deployment"
     }
   ],
