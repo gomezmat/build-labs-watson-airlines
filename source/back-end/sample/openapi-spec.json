@@ -102,88 +102,20 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "Flight successfully obtained.",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "properties": {
-                    "flight": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "object"
-                        },
-                        "AIRLINE": {
-                          "type": "object",
-                          "properties": {
-                            "type": {
-                              "type": "string",
-                              "example": "string"
-                            }
-                          }
-                        },
-                        "FLIGHT_NUMBER": {
-                          "type": "object",
-                          "properties": {
-                            "type": {
-                              "type": "string",
-                              "example": "number"
-                            }
-                          }
-                        },
-                        "ORIGIN_AIRPORT": {
-                          "type": "object",
-                          "properties": {
-                            "type": {
-                              "type": "string",
-                              "example": "string"
-                            }
-                          }
-                        },
-                        "DESTINATION_AIRPORT": {
-                          "type": "object",
-                          "properties": {
-                            "type": {
-                              "type": "string",
-                              "example": "string"
-                            }
-                          }
-                        },
-                        "CANCELLED": {
-                          "type": "object",
-                          "properties": {
-                            "type": {
-                              "type": "string",
-                              "example": "boolean"
-                            }
-                          }
-                        },
-                        "DEPARTURE_DATE": {
-                          "type": "object",
-                          "properties": {
-                            "type": {
-                              "type": "string",
-                              "example": "date"
-                            }
-                          }
-                        },
-                        "ARRIVAL_DATE": {
-                          "type": "object",
-                          "properties": {
-                            "type": {
-                              "type": "string",
-                              "example": "date"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
+                  "$ref": "#/components/schemas/Flight"
                 }
               }
             }
+          },
+          "404": {
+            "description": "Flight not found"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       }

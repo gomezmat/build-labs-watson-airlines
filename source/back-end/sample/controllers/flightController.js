@@ -6,7 +6,7 @@ async function showOne(req, res) {
     if (!flight) {
       return res.status(404).json({ error: "No flight found" });
     }
-    return res.json({ flight });
+    return res.json(flight);
   } catch (error) {
     console.error(error);
     return res.status(500).json({ error: "Error" });
@@ -14,17 +14,18 @@ async function showOne(req, res) {
 }
 
 async function showDepartures(req, res) {
+  const originAirport = req.query.originAirport;
+  const destinationAirport = req.query.destinationAirport;
+  const arrivalDate = new Date(req.query.arrivalDate);
   try {
-    const { originAirport, destinationAirport, arrivalDate } = req.query;
     const departures = await Flight.find({
       ORIGIN_AIRPORT: originAirport,
       DESTINATION_AIRPORT: destinationAirport,
       ARRIVAL_DATE: arrivalDate,
     });
-    return res.json({ departures });
-  } catch (error) {
-    console.error(error);
-    return res.status(500).json({ error: error });
+    return res.json({ departures: departures });
+  } catch (err) {
+    console.log(err);
   }
 }
 
